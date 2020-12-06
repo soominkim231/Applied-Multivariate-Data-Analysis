@@ -1,8 +1,7 @@
 # GOVT19: Applied Multivariate Data Analysis
 
 ## Final Project: Factors Determining Sentence Length and Severity for U.S. Inmates	
-Date: Jan 2019 – Mar 2019
-Affiliation: Dartmouth College
+Affiliation: Dartmouth College | Date: Jan 2019 – Mar 2019
 
 Project Description:
 
