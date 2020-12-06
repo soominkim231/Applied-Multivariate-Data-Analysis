@@ -1,1 +1,1 @@
-# GOVT19.01-Applied-Multivariate-Data-Analysis
+# GOVT19-Applied-Multivariate-Data-Analysis
