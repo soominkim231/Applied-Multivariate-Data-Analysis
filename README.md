@@ -3,7 +3,7 @@
 ## GOVT19: Applied Multivariate Data Analysis | Final Group Project | Dartmouth College
 - In Brief: Conducted multivariate linear and logistic regression using R, investigating the significant predictors of sentence length and severity for U.S. inmates across State and Federal Prisons. Visualized results showing expected values of receiving an extreme sentence as a function of various predictors including age, race, gender, education level, family background.
 
-### Project Description
+### Project Description:
 
 #### Question and Hypotheses
 Of demographic and case-specific factors, which are significant predictors of sentence length and severity?
@@ -11,13 +11,13 @@ Of demographic and case-specific factors, which are significant predictors of se
 - H2: The effect of being a violent offender, as opposed to being a non-violent offender on sentence length is greater for Black defendants as opposed to white defendants.
 - H3: Older defendants are less likely to receive an extreme sentence (life in prison or the death penalty) than younger defendants.
 
-#### Background Research:
+#### Background Research
 The American criminal justice system has long been criticized for showing racial bias in sentencing decisions (Everett 2002). Hence, state and federal sentencing guidelines were implemented to reduce disparities in sentencing on the basis of race and ethnicity, and ensure neutrality in sentencing (Blair 2004). However, research shows that Blacks still tend to receive harsher sentences than whites and that the differences in sentence length are only partly explained by offense-related characteristics (Everett 2002). 
 
-#### Data:
+#### Data
 We are examining a set of variables from the 2004 Survey of Inmates taken from the Bureau of Justice Statistics. This survey was conducted through personal interviews of a nationally representative sample of inmates across both State and Federal prisons. The survey included responses to questions about demographics, criminal history, sentencing, gender, drug use, and prisoner health. 
 
-#### Methodology:
+#### Methodology
 For H1 & H2, we use a multivariate linear regression with an interaction term Black & violent offense as one of the IVs and sentence in months as the DV.
 - Given the skew of our DV (with 6% classified as outliers and increasing the mean sentencing by 30 months), we estimated three OLS models, with varying degrees of outlier removal. We decided to use the most restrictive model (excluding sentences greater than 2000 months), given that its R-squared value is slightly higher, meaning more variation is explained by the model. Note: no predictors change in sign or statistical significance between the three models.
 - We calculated pairwise correlations between predictors to test for multicollinearity.
@@ -25,7 +25,7 @@ For H1 & H2, we use a multivariate linear regression with an interaction term Bl
 To study H3, we use a logistic regression. The dependent variable of interest is whether or not a defendant receives an extreme sentence (either life in prison or the death penalty). 
 - We created a subset of the data that only included entries for violent offenses, not drug or property offenses, because violent offenses are a near perfect predictor for receiving extreme sentences. 
 
-#### Discussion:
+#### Discussion
 - What we are interested in is whether there is a difference in sentence length (in months) for Black vs white offenders conditional on their offense being violent. In our chosen linear model (the rightmost model), the interaction term Black x Violent Offense is statistically significant, confirming our second hypothesis that sentence length increases for the offense being violent is dependent on the offender being Black or white.
 - The effect of being a violent offender (not changing the race of the offender from the baseline of being white) induces an increase of 107.5 months. This effect is statistically significant, with a p-value of <2e-16.
 - The effect of being black and a violent offender is 129.4 months – 22 months greater than their white counterparts. This effect is statistically significant, with a p-value of 4.91e-160. Note that this p-value was calculated from the standard error found using the variance covariance matrix.
